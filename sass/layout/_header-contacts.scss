@@ -1,0 +1,29 @@
+.contacts-header {
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+  &__item {
+    color: var(--secondary-text-color);
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__link {
+    @include centered(flex, center, null);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include transition(color, null, null, 250ms, var(--function-cubic));
+
+    @include text(null, 500, 14px, 16px, 0.02em, var(--secondary-text-color));
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

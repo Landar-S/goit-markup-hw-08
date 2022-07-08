@@ -1,0 +1,32 @@
+.subscribe {
+  margin-left: auto;
+  &__form {
+    display: flex;
+  }
+  &__title {
+    margin-bottom: 20px;
+
+    @include text(null, 700, 14px, 16px, 0.03em, var(--title-color));
+    text-transform: uppercase;
+  }
+  &__input {
+    padding: 15px 16px;
+    width: 358px;
+    height: 50px;
+
+    @include transition(border-color, null, null, 250ms, var(--function-cubic));
+
+    color: var(--title-color);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: transparent;
+    &:focus {
+      border-color: var(--accent-color);
+    }
+    &::placeholder {
+      @include text(null, null, 16px, 20px, 00.03em, rgba(255, 255, 255, 0.6));
+    }
+  }
+}

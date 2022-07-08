@@ -1,0 +1,20 @@
+@mixin centered($d, $ai, $jc) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin text($ff, $fw, $fs, $lh, $ls, $col) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+  color: $col;
+}
+
+@mixin transition($tfp, $tsp, $ttp, $td, $ttf) {
+  transition-property: $tfp, $tsp, $ttp;
+  transition-duration: $td;
+  transition-timing-function: $ttf;
+}

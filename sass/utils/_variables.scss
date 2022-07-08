@@ -1,0 +1,17 @@
+:root {
+  --accent-color: #2196f3;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --address-footer-color: rgba(255, 255, 255, 0.6);
+  --title-color: #ffffff;
+  --bg-color: #ffffff;
+  --logo-color: #afb1b8;
+  --secondary-bgc-btn: #188ce8;
+  --function-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--bg-color);
+}

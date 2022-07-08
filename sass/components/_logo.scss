@@ -1,0 +1,22 @@
+.logo {
+  @include text(null, 700, 26px, 31px, 0.03em, var(--accent-color));
+  font-family: 'Raleway', sans-serif;
+  &-header {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    &__label {
+      color: #000000;
+    }
+  }
+  &-footer {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    &__label {
+      color: var(--title-color);
+    }
+  }
+}

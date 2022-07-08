@@ -1,0 +1,9 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+  & .container {
+    @include centered(flex, baseline, null);
+  }
+}

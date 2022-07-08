@@ -1,0 +1,23 @@
+.contacts-footer {
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__address {
+    display: block;
+    width: 231px;
+    color: var(--title-color);
+  }
+  &__link {
+    color: var(--address-footer-color);
+  }
+}
+
+.contacts__label {
+  @include transition(color, null, null, 250ms, var(--function-cubic));
+
+  @include text(null, null, 14px, 24px, 0.03em, null);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

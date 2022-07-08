@@ -1,0 +1,77 @@
+.portfolio {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    display: block;
+
+    @include transition(box-shadow, null, null, 250ms, var(--function-cubic));
+    outline: transparent;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+    @include transition(opacity, transform, null, 250ms, var(--function-cubic));
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+  }
+  &__sub-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+
+    @include transition(opacity, null, null, 250ms, var(--function-cubic));
+    @include text(null, null, 18px, 28px, 0.03em, var(--title-color));
+    overflow: auto;
+  }
+  &__wrap {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: 0;
+  }
+  &__title {
+    margin-bottom: 4px;
+
+    @include text(null, null, 18px, 36px, 0.06em, var(--primary-text-color));
+  }
+  &__text {
+    @include text(null, null, 16px, 30px, 0.03em, var(--secondary-text-color));
+  }
+}
+
+.portfolio__link:hover .portfolio__overlay,
+.portfolio__link:focus .portfolio__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
