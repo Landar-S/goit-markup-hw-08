@@ -15,8 +15,10 @@
     @include desktop {
       margin-bottom: 50px;
     }
-
-    @include text(null, null, 36px, 42px, 0.03em, null);
+    @include text(null, null, 28px, 33px, 0.03em, null);
+    @include desktop {
+      @include text(null, null, 36px, 42px, 0.03em, null);
+    }
   }
   &__list {
     @include tablet {
@@ -57,7 +59,6 @@
     @include text(null, null, 16px, 19px, 0.03em, var(--secondary-text-color));
   }
   &__wrap {
-    // padding: 30px 32px;
     padding-top: 30px;
     padding-bottom: 24px;
     @include desktop {
