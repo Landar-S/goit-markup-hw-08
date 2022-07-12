@@ -1,29 +1,58 @@
 .contacts-header {
   &__list {
-    display: flex;
-    margin-left: auto;
+    display: none;
+    @include tablet {
+      display: block;
+      margin-left: auto;
+    }
+    @include desktop {
+      display: flex;
+    }
   }
   &__item {
     color: var(--secondary-text-color);
   }
   &__item + &__item {
-    margin-left: 30px;
+    @include tablet {
+      margin-top: 10px;
+    }
+    @include desktop {
+      margin-top: 0;
+      margin-left: 30px;
+    }
   }
   &__link {
     @include centered(flex, center, null);
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @include desktop {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
     @include transition(color, null, null, 250ms, var(--function-cubic));
-
-    @include text(null, 500, 14px, 16px, 0.02em, var(--secondary-text-color));
+    @include text(null, 500, 12px, 14px, 0.02em, var(--secondary-text-color));
+    @include desktop {
+      @include text(null, 500, 14px, 16px, 0.02em, var(--secondary-text-color));
+    }
     &:hover,
     &:focus {
       color: var(--accent-color);
     }
   }
+  &__tablet-icon {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 8px;
+      fill: currentColor;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
   &__icon {
-    margin-right: 10px;
-    fill: currentColor;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+      margin-right: 10px;
+      fill: currentColor;
+    }
   }
 }

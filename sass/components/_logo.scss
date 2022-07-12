@@ -1,10 +1,23 @@
 .logo {
-  @include text(null, 700, 26px, 31px, 0.03em, var(--accent-color));
+  @include text(null, 700, 24px, 28px, 0.03em, var(--accent-color));
   font-family: 'Raleway', sans-serif;
+  @include desktop {
+    @include text(null, null, 26px, 31px, null, null);
+  }
   &-header {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include tablet {
+      margin-right: 88px;
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    @include desktop {
+      margin-right: 93px;
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
+
     &__label {
       color: #000000;
     }

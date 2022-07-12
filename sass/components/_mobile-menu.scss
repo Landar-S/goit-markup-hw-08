@@ -1,0 +1,142 @@
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 48px 40px;
+  width: 100%;
+  height: 100vh;
+
+  transform: translateY(-100%);
+  visibility: hidden;
+  pointer-events: none;
+  @include transition(null, transform, visibility, 250ms, var(--function-cubic));
+  @media screen and (min-width: 560px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: calc((100vw - 480px) / 2);
+    padding-right: calc((100vw - 480px) / 2);
+  }
+
+  background-color: var(--bg-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  &.is-open {
+    @include centered(flex, null, space-between);
+    flex-direction: column;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: initial;
+    @include tablet {
+      display: none;
+    }
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-menu-btn {
+  display: block;
+  border: none;
+  background-color: transparent;
+  fill: #212121;
+  z-index: 2;
+  @include transition(fill, null, null, 250ms, var(--function-cubic));
+  &__icon-close {
+    display: none;
+  }
+  &.is-open &__icon-close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  &.is-open &__icon-open {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.mobile-menu__nav {
+  &-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &-link {
+    @include transition(color, null, null, 250ms, var(--function-cubic));
+    @include text(null, 500, 40px, 47px, 0.02em, var(--primary-tex-color));
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.current-page-mob {
+  color: var(--accent-color);
+}
+
+.mobile-menu__contacts {
+  &-item + &-item {
+    margin-top: 32px;
+  }
+  &-tel {
+    @include transition(color, null, null, 250ms, var(--function-cubic));
+    @include text(null, 500, 26px, 40px, 0.02em, var(--accent-color));
+    @include mobile {
+      font-size: 34px;
+    }
+    &:hover,
+    &:focus {
+      color: var(--secondary-bgc-btn);
+    }
+  }
+  &-mail {
+    @include transition(color, null, null, 250ms, var(--function-cubic));
+    @include text(null, 500, 24px, 28px, 0.02em, var(--secondary-text-color));
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.mobile-menu__socials {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 64px;
+  }
+  &-item {
+    display: flex;
+  }
+  &-link {
+    @include transition(color, null, null, 250ms, var(--function-cubic));
+    @include text(null, 500, 18px, 22px, 0.02em, var(--accent-color));
+    @include mobile {
+      @include text(null, null, 18px, 22px, null, null);
+    }
+    &:hover,
+    &:focus {
+      color: var(--secondary-bgc-btn);
+    }
+  }
+}
+
+.mobile-menu__border {
+  margin-right: 10px;
+  width: 1px;
+  height: 22px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}

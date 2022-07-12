@@ -1,6 +1,9 @@
 .site-nav {
   &__list {
-    display: flex;
+    display: none;
+    @include tablet {
+      display: flex;
+    }
   }
   &__item:not(:last-child) {
     margin-right: 50px;
