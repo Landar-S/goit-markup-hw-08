@@ -23,7 +23,10 @@
 }
 
 .subscribe-btn {
-  margin-left: 12px;
+  margin: 0 auto;
+  @include desktop {
+    margin-left: 12px;
+  }
   &__icon {
     margin-left: 10px;
   }

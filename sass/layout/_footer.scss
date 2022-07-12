@@ -4,6 +4,27 @@
 
   background-color: #2f303a;
   & .container {
-    @include centered(flex, baseline, null);
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
+      @include centered(null, baseline, null);
+      flex-direction: row;
+    }
+  }
+  &__wrap {
+    @include tablet {
+      padding: 0 74px 0 61px;
+      margin-bottom: 60px;
+      @include centered(flex, baseline, space-between);
+    }
+    @include desktop {
+      padding: 0;
+      margin-bottom: 0;
+    }
   }
 }

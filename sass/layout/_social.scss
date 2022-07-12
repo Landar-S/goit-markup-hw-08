@@ -1,5 +1,10 @@
 .social {
-  margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-left: 70px;
+  }
   &__title {
     margin-bottom: 20px;
 
@@ -7,7 +12,7 @@
     text-transform: uppercase;
   }
   &__list {
-    display: flex;
+    @include centered(flex, null, center);
   }
   &__item {
     width: 44px;
