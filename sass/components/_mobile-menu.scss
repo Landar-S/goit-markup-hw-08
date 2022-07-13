@@ -6,6 +6,7 @@
   padding: 48px 40px;
   width: 100%;
   height: 100vh;
+  overflow-y: auto;
 
   transform: translateY(-100%);
   visibility: hidden;
@@ -34,10 +35,6 @@
   @include tablet {
     display: none;
   }
-}
-
-.no-scroll {
-  overflow: hidden;
 }
 
 .mobile-menu-btn {
