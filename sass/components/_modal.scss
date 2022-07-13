@@ -35,6 +35,9 @@
   top: 50%;
   left: 50%;
   overflow-y: auto;
+  @include desktop {
+    overflow-y: hidden;
+  }
   transform: translate(-50%, -50%) scale(1);
   width: calc(100% - 30px);
   height: calc(100% - 30px);
