@@ -241,6 +241,9 @@ body {
   color: var(--primary-text-color);
   background-color: var(--bg-color);
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .visually-hidden {
   position: absolute;
@@ -483,11 +486,6 @@ body {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: var(--function-cubic);
-}
-@media screen and (min-width: 1200px) {
-  .modal {
-    overflow-y: hidden;
-  }
 }
 @media screen and (min-width: 480px) {
   .modal {
