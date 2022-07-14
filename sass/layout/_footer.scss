@@ -17,9 +17,9 @@
     }
   }
   &__wrap {
+    margin-bottom: 60px;
     @include tablet {
       padding: 0 74px 0 61px;
-      margin-bottom: 60px;
       @include centered(flex, baseline, space-between);
     }
     @include desktop {

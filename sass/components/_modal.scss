@@ -173,7 +173,7 @@
     @include desktop {
       @include text(null, null, 14px, 24px, null, null);
     }
-    & > p {
+    & > span {
       display: flex;
       flex-wrap: wrap;
     }
