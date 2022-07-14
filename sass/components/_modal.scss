@@ -88,7 +88,10 @@
     margin-bottom: 12px;
 
     text-align: center;
-    @include text(null, 700, 20px, 30px, 00.03em, var(--primary-text-color));
+    @include text(null, 700, 15px, 30px, 00.03em, var(--primary-text-color));
+    @include mobile {
+      font-size: 20px;
+    }
     @include desktop {
       line-height: 1.15;
     }

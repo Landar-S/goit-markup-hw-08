@@ -534,10 +534,15 @@ body {
   margin-bottom: 12px;
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 2;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .modal__title {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__title {
@@ -977,6 +982,16 @@ body {
 }
 .contacts-header__link:hover, .contacts-header__link:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-header__link-mail {
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-header__link-tel {
+    padding-bottom: 20px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts-header__tablet-icon {
