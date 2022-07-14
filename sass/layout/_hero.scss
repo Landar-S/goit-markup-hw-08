@@ -8,31 +8,31 @@
 
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../../images/index/hero/hero-bg-mobile.jpg);
+    url(../images/index/hero/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
   @include retina2x {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/index/hero/hero-bg-mobile-2x.jpg);
+      url(../images/index/hero/hero-bg-mobile-2x.jpg);
   }
   @include retina3x {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/index/hero/hero-bg-mobile-3x.jpg);
+      url(../images/index/hero/hero-bg-mobile-3x.jpg);
   }
 
   @include tablet {
     max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/index/hero/hero-bg-tablet.jpg);
+      url(../images/index/hero/hero-bg-tablet.jpg);
     @include retina2x {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/index/hero/hero-bg-tablet-2x.jpg);
+        url(../images/index/hero/hero-bg-tablet-2x.jpg);
     }
     @include retina3x {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/index/hero/hero-bg-tablet-3x.jpg);
+        url(../images/index/hero/hero-bg-tablet-3x.jpg);
     }
   }
   @include desktop {
@@ -40,14 +40,14 @@
     padding-bottom: 200px;
     max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/index/hero/hero-bg-desktop.jpg);
+      url(../images/index/hero/hero-bg-desktop.jpg);
     @include retina2x {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/index/hero/hero-bg-desktop-2x.jpg);
+        url(../images/index/hero/hero-bg-desktop-2x.jpg);
     }
     @include retina3x {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/index/hero/hero-bg-desktop-3x.jpg);
+        url(../images/index/hero/hero-bg-desktop-3x.jpg);
     }
   }
   &__title {
